@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import { Container, Form, Header, Button } from "semantic-ui-react";
 
 export class StepOneSenderDetails extends Component {
   render() {
     const { onAction } = this.props;
 
     return (
-      <div>
-        <h3 class="ui header">Enter Sender's Details</h3>
-        <form class="ui form">
-          <div class="field">
+      <Container>
+        <Header as="h3">Enter Sender's Details</Header>
+        <Form>
+          <Form.Field>
             <label>Name:</label>
             <input
               placeholder="Enter full name"
@@ -18,8 +19,8 @@ export class StepOneSenderDetails extends Component {
               onChange={onAction}
               value={this.props.wizardContext.from.name}
             />
-          </div>
-          <div class="field">
+          </Form.Field>
+          <Form.Field>
             <label>Street Address:</label>
             <input
               placeholder="Enter street address"
@@ -29,21 +30,21 @@ export class StepOneSenderDetails extends Component {
               onChange={onAction}
               value={this.props.wizardContext.from.street}
             />
-          </div>
-          <div class="field">
-            <label>City:</label>
-            <input
-              placeholder="Enter City"
+          </Form.Field>
+          <Form.Group widths="equal">
+            <Form.Input
+              fluid
+              label="City"
+              placeholder="Enter city"
               id="city"
               step="from"
               type="text"
               onChange={onAction}
               value={this.props.wizardContext.from.city}
             />
-          </div>
-          <div class="field">
-            <label>State:</label>
-            <input
+            <Form.Input
+              fluid
+              label="State"
               placeholder="Enter state"
               id="state"
               step="from"
@@ -51,10 +52,9 @@ export class StepOneSenderDetails extends Component {
               onChange={onAction}
               value={this.props.wizardContext.from.state}
             />
-          </div>
-          <div class="field">
-            <label>Zip Code:</label>
-            <input
+            <Form.Input
+              fluid
+              label="Zip Code"
               placeholder="Enter zip code"
               id="zip"
               step="from"
@@ -62,12 +62,12 @@ export class StepOneSenderDetails extends Component {
               onChange={onAction}
               value={this.props.wizardContext.from.zip}
             />
-          </div>
-          <button type="submit" class="ui button">
+          </Form.Group>
+          <Button primary type="submit">
             Submit
-          </button>
-        </form>
-      </div>
+          </Button>
+        </Form>
+      </Container>
     );
   }
 }

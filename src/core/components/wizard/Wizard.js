@@ -48,8 +48,8 @@ export default class Wizard extends Component {
 }
 
 Wizard.propTypes = {
-  header: PropTypes.func.isRequired,
+  // header: PropTypes.func.isRequired,
   steps: PropTypes.array.isRequired,
-  wizardContext: PropTypes.object.isRequired,
-  onComplete: PropTypes.func.isRequired
+  wizardContext: PropTypes.object.isRequired
+  // onComplete: PropTypes.func.isRequired
 };
