@@ -1,13 +1,22 @@
 import React, { Component } from "react";
-import { Container, Form, Header, Button } from "semantic-ui-react";
+import { Container, Header, Divider, Form, Button } from "semantic-ui-react";
 
 export class StepOneSenderDetails extends Component {
   render() {
     const { onAction } = this.props;
 
     return (
-      <Container>
-        <Header as="h3">Enter Sender's Details</Header>
+      <Container
+        style={{
+          border: "solid",
+          borderWidth: "0.5px",
+          borderColor: "grey",
+          borderRadius: "5px",
+          padding: "15px"
+        }}
+      >
+        <Header as="h2">Enter Sender's Details</Header>
+        <Divider />
         <Form>
           <Form.Field>
             <label>Name:</label>

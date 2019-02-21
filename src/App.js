@@ -10,7 +10,9 @@ class App extends Component {
     return (
       <Container>
         <Container textAlign="center">
-          <Header as="h1">Shipping Label Maker</Header>
+          <Header as="h1" style={{ padding: "40px 0" }}>
+            Shipping Label Maker
+          </Header>
         </Container>
         <Wizard wizardContext={LabelSchema} steps={steps} />
       </Container>
