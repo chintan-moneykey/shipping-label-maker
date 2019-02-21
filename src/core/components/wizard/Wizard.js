@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class Wizard extends Component {
   constructor(props) {
@@ -33,6 +34,22 @@ export default class Wizard extends Component {
   }
 
   render() {
-    return <div />;
+    return (
+      <div>
+        {React.cloneElement(this.props.steps[this.state.currentStep - 1], {
+          onAction: this[
+            this.props.steps[this.state.currentStep - 1].props.onAction
+          ],
+          wizardContext: this.state.wizardContext
+        })}
+      </div>
+    );
   }
 }
+
+Wizard.propTypes = {
+  header: PropTypes.func.isRequired,
+  steps: PropTypes.array.isRequired,
+  wizardContext: PropTypes.object.isRequired,
+  onComplete: PropTypes.func.isRequired
+};

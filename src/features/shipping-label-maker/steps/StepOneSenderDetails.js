@@ -2,63 +2,64 @@ import React, { Component } from "react";
 
 export class StepOneSenderDetails extends Component {
   render() {
-    const { data } = this.props;
+    const { onAction } = this.props;
 
     return (
       <div>
-      <h1 class="ui header">Enter Sender's Details</h1>
+        <h3 class="ui header">Enter Sender's Details</h3>
         <form class="ui form">
           <div class="field">
-            <label>Name</label>
-            <input 
-              placeholder="Enter full name" 
-              id="name" 
-              step="from" 
-              type="text" 
-              onChange={data} 
-              value={this.props.wizardContext.from.name} />
+            <label>Name:</label>
+            <input
+              placeholder="Enter full name"
+              id="name"
+              step="from"
+              type="text"
+              onChange={onAction}
+              value={this.props.wizardContext.from.name}
+            />
           </div>
           <div class="field">
-            <label>Street Address</label>
-            <input 
+            <label>Street Address:</label>
+            <input
               placeholder="Enter street address"
               id="street"
               step="from"
               type="text"
-              onChange={data}
+              onChange={onAction}
               value={this.props.wizardContext.from.street}
             />
           </div>
           <div class="field">
-            <label>City</label>
-            <input 
+            <label>City:</label>
+            <input
               placeholder="Enter City"
               id="city"
               step="from"
               type="text"
-              onChange={data}
+              onChange={onAction}
               value={this.props.wizardContext.from.city}
             />
           </div>
           <div class="field">
-            <label>State</label>
-            <input 
+            <label>State:</label>
+            <input
               placeholder="Enter state"
               id="state"
               step="from"
               type="text"
-              onChange={data}
+              onChange={onAction}
               value={this.props.wizardContext.from.state}
             />
           </div>
           <div class="field">
-            <label>Zip Code</label>
-            <input 
+            <label>Zip Code:</label>
+            <input
               placeholder="Enter zip code"
               id="zip"
               step="from"
               type="text"
-              onChange={data}
+              onChange={onAction}
               value={this.props.wizardContext.from.zip}
             />
           </div>
@@ -73,7 +74,7 @@ export class StepOneSenderDetails extends Component {
 
 StepOneSenderDetails.defaultProps = {
   wizardContext: {},
-  data: () => {}
-}
+  onAction: () => {}
+};
 
 export default StepOneSenderDetails;

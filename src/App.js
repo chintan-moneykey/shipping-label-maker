@@ -8,7 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Shipping Label Maker</h1>
+        <div class="ui center aligned container">
+          <h1 class="ui header">Shipping Label Maker</h1>
+        </div>
         <Wizard wizardContext={LabelSchema} steps={steps} />
       </div>
     );
