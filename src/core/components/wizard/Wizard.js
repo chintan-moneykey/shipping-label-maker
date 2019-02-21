@@ -12,7 +12,7 @@ export default class Wizard extends Component {
     this.previousStep = this.previousStep.bind(this);
   }
 
-  submit(finalLabel) {
+  labelSubmit(finalLabel) {
     this.props.handleSubmit(finalLabel);
   }
 
