@@ -7,15 +7,17 @@ const Navigation = props => (
       marginTop: "20px"
     }}
   >
-    <Button
-      icon
-      labelPosition="left"
-      floated="left"
-      onClick={props.previousStep}
-    >
-      <Icon name="left arrow" />
-      Go Back
-    </Button>
+    {props.currentStep < 2 ? null : (
+      <Button
+        icon
+        labelPosition="left"
+        floated="left"
+        onClick={props.previousStep}
+      >
+        <Icon name="left arrow" />
+        Go Back
+      </Button>
+    )}
     <Button
       primary
       icon
