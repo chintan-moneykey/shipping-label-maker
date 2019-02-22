@@ -6,15 +6,24 @@ export default class StepFiveConfirmation extends Component {
     super(props);
     this.state = {
       wizardContext: this.props.wizardContext,
+      shippingOption: " ",
       shippingTotal: 0
     };
 
-    // this.confirm = this.confirm.bind(this);
+    this.confirm = this.confirm.bind(this);
   }
 
   componentDidMount() {
+    this.getShippingOption();
     this.getShippingCost();
   }
+
+  getShippingOption = () => {
+    const option =
+      this.state.wizardContext.shippingOption === "1" ? "Ground" : "Express";
+
+    this.setState({ shippingOption: option });
+  };
 
   getShippingCost = () => {
     const { wizardContext } = this.state;
@@ -83,7 +92,7 @@ export default class StepFiveConfirmation extends Component {
         <Segment.Group>
           <Segment>Shipping Method:</Segment>
           <Segment.Group>
-            <Segment>{wizardContext.shippingOption}</Segment>
+            <Segment>{this.state.shippingOption}</Segment>
           </Segment.Group>
         </Segment.Group>
         <Segment.Group style={{ fontWeight: "bold" }}>
