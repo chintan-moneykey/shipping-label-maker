@@ -77,11 +77,13 @@ export default class Wizard extends Component {
           ],
           wizardContext: this.state.wizardContext
         })}
-        <Navigation
-          previousStep={this.previousStep}
-          nextStep={this.nextStep}
-          currentStep={this.state.currentStep}
-        />
+        {this.state.currentStep > 4 ? null : (
+          <Navigation
+            previousStep={this.previousStep}
+            nextStep={this.nextStep}
+            currentStep={this.state.currentStep}
+          />
+        )}
       </div>
     );
   }

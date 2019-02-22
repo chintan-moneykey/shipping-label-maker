@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Segment } from "semantic-ui-react";
+import { Container, Segment, Button } from "semantic-ui-react";
 
 export default class StepFiveConfirmation extends Component {
   constructor(props) {
@@ -101,6 +101,9 @@ export default class StepFiveConfirmation extends Component {
             <Segment>${this.state.shippingTotal}</Segment>
           </Segment.Group>
         </Segment.Group>
+        <Button color="green" onClick={this.confirm}>
+          Submit Info
+        </Button>
       </Container>
     );
   }
