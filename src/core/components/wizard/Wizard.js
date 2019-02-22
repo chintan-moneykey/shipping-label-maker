@@ -69,8 +69,11 @@ export default class Wizard extends Component {
   }
 
   render() {
+    const Header = this.props.header;
+
     return (
       <div>
+        <Header />
         <ProgressBar currentStep={this.state.currentStep} />
         {React.cloneElement(this.props.steps[this.state.currentStep - 1], {
           onAction: this[
@@ -89,6 +92,7 @@ export default class Wizard extends Component {
 }
 
 Wizard.propTypes = {
+  header: PropTypes.func.isRequired,
   steps: PropTypes.array.isRequired,
   wizardContext: PropTypes.object.isRequired
   // onComplete: PropTypes.func.isRequired
