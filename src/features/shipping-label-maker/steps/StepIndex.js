@@ -8,7 +8,7 @@ const steps = [
     onAction={"handleNameAndAddress"}
   />,
   <StepTwoRecipientDetails
-    wizardContext={"from"}
+    wizardContext={"to"}
     onAction={"handleNameAndAddress"}
   />
 ];

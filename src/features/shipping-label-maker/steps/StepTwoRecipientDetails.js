@@ -23,7 +23,7 @@ export class StepTwoRecipientDetails extends Component {
             <label>Name:</label>
             <input
               placeholder="Enter full name"
-              id="from"
+              id="to"
               field="name"
               type="text"
               onChange={onAction}
@@ -34,7 +34,7 @@ export class StepTwoRecipientDetails extends Component {
             <label>Street Address:</label>
             <input
               placeholder="Enter street address"
-              id="from"
+              id="to"
               field="street"
               type="text"
               onChange={onAction}
@@ -46,7 +46,7 @@ export class StepTwoRecipientDetails extends Component {
               <label>City:</label>
               <input
                 placeholder="Enter city"
-                id="from"
+                id="to"
                 field="city"
                 type="text"
                 onChange={onAction}
@@ -57,7 +57,7 @@ export class StepTwoRecipientDetails extends Component {
               <label>State:</label>
               <input
                 placeholder="Enter state"
-                id="from"
+                id="to"
                 field="state"
                 type="text"
                 onChange={onAction}
@@ -68,7 +68,7 @@ export class StepTwoRecipientDetails extends Component {
               <label>Zip Code:</label>
               <input
                 placeholder="Enter zip code"
-                id="from"
+                id="to"
                 field="zip"
                 type="text"
                 onChange={onAction}
