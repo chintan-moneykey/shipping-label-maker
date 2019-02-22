@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Container, Header, Divider, Form } from "semantic-ui-react";
 
-export class StepOneSenderDetails extends Component {
+export class StepTwoRecipientDetails extends Component {
   render() {
     const { onAction } = this.props;
-    const senderDetails = this.props.wizardContext.from;
+    const recipientDetails = this.props.wizardContext.to;
 
     return (
       <Container
@@ -16,7 +16,7 @@ export class StepOneSenderDetails extends Component {
           padding: "15px"
         }}
       >
-        <Header as="h2">Enter Sender's Details</Header>
+        <Header as="h2">Enter Recipient's Details</Header>
         <Divider />
         <Form>
           <Form.Field>
@@ -27,52 +27,52 @@ export class StepOneSenderDetails extends Component {
               field="name"
               type="text"
               onChange={onAction}
-              value={senderDetails.name}
+              value={recipientDetails.name}
             />
           </Form.Field>
           <Form.Field>
             <label>Street Address:</label>
             <input
-              placeholder="Enter current street address"
+              placeholder="Enter street address"
               id="from"
               field="street"
               type="text"
               onChange={onAction}
-              value={senderDetails.street}
+              value={recipientDetails.street}
             />
           </Form.Field>
           <Form.Group widths="equal">
             <Form.Field>
               <label>City:</label>
               <input
-                placeholder="Enter current city"
+                placeholder="Enter city"
                 id="from"
                 field="city"
                 type="text"
                 onChange={onAction}
-                value={senderDetails.city}
+                value={recipientDetails.city}
               />
             </Form.Field>
             <Form.Field>
               <label>State:</label>
               <input
-                placeholder="Enter current state"
+                placeholder="Enter state"
                 id="from"
                 field="state"
                 type="text"
                 onChange={onAction}
-                value={senderDetails.state}
+                value={recipientDetails.state}
               />
             </Form.Field>
             <Form.Field>
               <label>Zip Code:</label>
               <input
-                placeholder="Enter current zip code"
+                placeholder="Enter zip code"
                 id="from"
                 field="zip"
                 type="text"
                 onChange={onAction}
-                value={senderDetails.zip}
+                value={recipientDetails.zip}
               />
             </Form.Field>
           </Form.Group>
@@ -82,9 +82,9 @@ export class StepOneSenderDetails extends Component {
   }
 }
 
-StepOneSenderDetails.defaultProps = {
+StepTwoRecipientDetails.defaultProps = {
   wizardContext: {},
   onAction: () => {}
 };
 
-export default StepOneSenderDetails;
+export default StepTwoRecipientDetails;

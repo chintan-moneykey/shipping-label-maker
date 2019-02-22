@@ -8,7 +8,6 @@ const Navigation = props => (
     }}
   >
     <Button
-      secondary
       icon
       labelPosition="left"
       floated="left"
