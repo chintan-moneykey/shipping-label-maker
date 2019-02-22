@@ -10,7 +10,7 @@ import steps from "./features/shipping-label-maker/steps/StepIndex";
 class App extends Component {
   render() {
     return (
-      <Container>
+      <Container style={{ paddingBottom: "100px" }}>
         <Wizard wizardContext={LabelSchema} header={Header} steps={steps} />
       </Container>
     );
