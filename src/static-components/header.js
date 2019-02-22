@@ -1,12 +1,12 @@
 import React from "react";
-import { Container, Header } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 
 const Header = props => {
   return (
     <Container textAlign="center">
-      <Header as="h1" style={{ padding: "40px 0" }}>
+      <h1 className="ui header" style={{ padding: "40px 0" }}>
         Shipping Label Maker
-      </Header>
+      </h1>
     </Container>
   );
 };
