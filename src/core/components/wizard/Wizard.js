@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import ProgressBar from "../../../static-components/ProgressBar";
 import Navigation from "../../../static-components/Navigation";
 
 export default class Wizard extends Component {
@@ -70,6 +71,7 @@ export default class Wizard extends Component {
   render() {
     return (
       <div>
+        <ProgressBar currentStep={this.state.currentStep} />
         {React.cloneElement(this.props.steps[this.state.currentStep - 1], {
           onAction: this[
             this.props.steps[this.state.currentStep - 1].props.onAction
