@@ -3,6 +3,7 @@ import StepOneSenderDetails from "./StepOneSenderDetails";
 import StepTwoRecipientDetails from "./StepTwoRecipientDetails";
 import StepThreeWeight from "./StepThreeWeight";
 import StepFourShipping from "./StepFourShipping";
+import StepFiveConfirmation from "./StepFiveConfirmation";
 
 const steps = [
   <StepOneSenderDetails
@@ -17,7 +18,8 @@ const steps = [
   <StepFourShipping
     wizardContext={"shippingOption"}
     onAction={"handleRootState"}
-  />
+  />,
+  <StepFiveConfirmation wizardContext={"wizardContext"} onAction={"confirm"} />
 ];
 
 export default steps;
