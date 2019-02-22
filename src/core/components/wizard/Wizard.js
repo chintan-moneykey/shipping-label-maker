@@ -20,6 +20,7 @@ export default class Wizard extends Component {
   handleRootState(event) {
     const id = event.target.getAttribute("id"),
       value = event.target.value;
+
     this.setState({
       wizardContext: { ...this.state.wizardContext, [id]: value }
     });
