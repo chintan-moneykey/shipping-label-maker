@@ -22,8 +22,8 @@ export class StepOneSenderDetails extends Component {
             <label>Name:</label>
             <input
               placeholder="Enter full name"
-              id="name"
-              step="from"
+              id="from"
+              field="name"
               type="text"
               onChange={onAction}
               value={this.props.wizardContext.from.name}
@@ -32,45 +32,48 @@ export class StepOneSenderDetails extends Component {
           <Form.Field>
             <label>Street Address:</label>
             <input
-              placeholder="Enter street address"
-              id="street"
-              step="from"
+              placeholder="Enter current street address"
+              id="from"
+              field="street"
               type="text"
               onChange={onAction}
               value={this.props.wizardContext.from.street}
             />
           </Form.Field>
           <Form.Group widths="equal">
-            <Form.Input
-              fluid
-              label="City"
-              placeholder="Enter city"
-              id="city"
-              step="from"
-              type="text"
-              onChange={onAction}
-              value={this.props.wizardContext.from.city}
-            />
-            <Form.Input
-              fluid
-              label="State"
-              placeholder="Enter state"
-              id="state"
-              step="from"
-              type="text"
-              onChange={onAction}
-              value={this.props.wizardContext.from.state}
-            />
-            <Form.Input
-              fluid
-              label="Zip Code"
-              placeholder="Enter zip code"
-              id="zip"
-              step="from"
-              type="text"
-              onChange={onAction}
-              value={this.props.wizardContext.from.zip}
-            />
+            <Form.Field>
+              <label>City:</label>
+              <input
+                placeholder="Enter current city"
+                id="from"
+                field="city"
+                type="text"
+                onChange={onAction}
+                value={this.props.wizardContext.from.city}
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>State:</label>
+              <input
+                placeholder="Enter current state"
+                id="from"
+                field="state"
+                type="text"
+                onChange={onAction}
+                value={this.props.wizardContext.from.state}
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>Zip Code:</label>
+              <input
+                placeholder="Enter current zip code"
+                id="from"
+                field="zip"
+                type="text"
+                onChange={onAction}
+                value={this.props.wizardContext.from.zip}
+              />
+            </Form.Field>
           </Form.Group>
           <Button primary type="submit">
             Submit

@@ -8,29 +8,34 @@ export default class Wizard extends Component {
       wizardContext: this.props.wizardContext,
       currentStep: 1
     };
+  }
 
-    this.nextStep = this.nextStep.bind(this);
-    this.previousStep = this.previousStep.bind(this);
+  handleRootState(event) {
+    const id = event.target.getAttribute("id"),
+      value = event.target.value;
+    this.setState({
+      wizardContext: { ...this.state.wizardContext, [id]: value }
+    });
+  }
+
+  handleNameAndAddress(event) {
+    const id = event.target.getAttribute("id"),
+      field = event.target.getAttribute("field"),
+      value = event.target.value;
+
+    console.log(id);
+    console.log(field);
+    console.log(value);
+
+    this.setState(state => ({
+      wizardContext: Object.assign({}, state.wizardContext, {
+        [id]: { [field]: value }
+      })
+    }));
   }
 
   labelSubmit(finalLabel) {
     this.props.handleSubmit(finalLabel);
-  }
-
-  nextStep() {
-    this.setState(prevState => {
-      return {
-        currentStep: prevState.currentStep + 1
-      };
-    });
-  }
-
-  previousStep() {
-    if (this.state.currentStep > 1) {
-      this.setState({
-        currentStep: this.state.currentStep - 1
-      });
-    }
   }
 
   render() {
@@ -48,7 +53,6 @@ export default class Wizard extends Component {
 }
 
 Wizard.propTypes = {
-  // header: PropTypes.func.isRequired,
   steps: PropTypes.array.isRequired,
   wizardContext: PropTypes.object.isRequired
   // onComplete: PropTypes.func.isRequired
