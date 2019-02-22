@@ -21,6 +21,10 @@ export default class Wizard extends Component {
     const id = event.target.getAttribute("id"),
       value = event.target.value;
 
+    if (id === "shippingOption") {
+      parseInt(value);
+    }
+
     this.setState({
       wizardContext: { ...this.state.wizardContext, [id]: value }
     });

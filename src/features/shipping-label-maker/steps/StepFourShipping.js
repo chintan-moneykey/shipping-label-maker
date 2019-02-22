@@ -4,7 +4,6 @@ import { Container, Header, Divider, Form } from "semantic-ui-react";
 export class StepFourShipping extends Component {
   render() {
     const { onAction } = this.props;
-    const { shippingOption } = this.props.wizardContext;
 
     return (
       <Container
@@ -26,12 +25,18 @@ export class StepFourShipping extends Component {
               control="input"
               type="radio"
               name="htmlRadios"
+              onChange={onAction}
+              id="shippingOption"
+              value="1"
             />
             <Form.Field
               label="Express"
               control="input"
               type="radio"
               name="htmlRadios"
+              onChange={onAction}
+              id="shippingOption"
+              value="2"
             />
           </Form.Group>
         </Form>
