@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Header } from "semantic-ui-react";
 
-const header = props => {
+const Header = props => {
   return (
     <Container textAlign="center">
       <Header as="h1" style={{ padding: "40px 0" }}>
@@ -11,4 +11,4 @@ const header = props => {
   );
 };
 
-export default header;
+export default Header;
