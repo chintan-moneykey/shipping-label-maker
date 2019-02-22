@@ -30,9 +30,6 @@ export default class StepFiveConfirmation extends Component {
     const weight = wizardContext.weight;
     const shippingOption = wizardContext.shippingOption;
 
-    console.log(weight);
-    console.log(shippingOption);
-
     const shippingRate = 0.4,
       shippingCost =
         weight *

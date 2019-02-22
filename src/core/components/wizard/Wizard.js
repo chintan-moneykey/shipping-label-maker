@@ -16,6 +16,7 @@ export default class Wizard extends Component {
     this.handleRootState = this.handleRootState.bind(this);
     this.nextStep = this.nextStep.bind(this);
     this.previousStep = this.previousStep.bind(this);
+    this.labelSubmit = this.labelSubmit.bind(this);
   }
 
   handleRootState(event) {
@@ -61,7 +62,7 @@ export default class Wizard extends Component {
   }
 
   labelSubmit(finalLabel) {
-    this.props.handleSubmit(finalLabel);
+    this.props.onComplete(finalLabel);
   }
 
   render() {
@@ -92,6 +93,6 @@ export default class Wizard extends Component {
 Wizard.propTypes = {
   header: PropTypes.func.isRequired,
   steps: PropTypes.array.isRequired,
-  wizardContext: PropTypes.object.isRequired
-  // onComplete: PropTypes.func.isRequired
+  wizardContext: PropTypes.object.isRequired,
+  onComplete: PropTypes.func.isRequired
 };

@@ -19,7 +19,10 @@ const steps = [
     wizardContext={"shippingOption"}
     onAction={"handleRootState"}
   />,
-  <StepFiveConfirmation wizardContext={"wizardContext"} onAction={"confirm"} />
+  <StepFiveConfirmation
+    wizardContext={"wizardContext"}
+    onAction={"labelSubmit"}
+  />
 ];
 
 export default steps;
