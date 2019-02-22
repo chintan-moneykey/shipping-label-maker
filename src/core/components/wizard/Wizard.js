@@ -8,6 +8,8 @@ export default class Wizard extends Component {
       wizardContext: this.props.wizardContext,
       currentStep: 1
     };
+
+    this.handleNameAndAddress = this.handleNameAndAddress.bind(this);
   }
 
   handleRootState(event) {
@@ -23,14 +25,15 @@ export default class Wizard extends Component {
       field = event.target.getAttribute("field"),
       value = event.target.value;
 
-    console.log(id);
-    console.log(field);
-    console.log(value);
-
-    this.setState(state => ({
-      wizardContext: Object.assign({}, state.wizardContext, {
-        [id]: { [field]: value }
-      })
+    this.setState(prevState => ({
+      ...prevState,
+      wizardContext: {
+        ...prevState.wizardContext,
+        [id]: {
+          ...prevState.wizardContext[id],
+          [field]: value
+        }
+      }
     }));
   }
 
