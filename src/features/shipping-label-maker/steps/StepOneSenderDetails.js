@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Header, Divider, Form, Button } from "semantic-ui-react";
+import { Container, Header, Divider, Form } from "semantic-ui-react";
 
 export class StepOneSenderDetails extends Component {
   render() {
@@ -75,9 +75,6 @@ export class StepOneSenderDetails extends Component {
               />
             </Form.Field>
           </Form.Group>
-          <Button primary type="submit">
-            Submit
-          </Button>
         </Form>
       </Container>
     );

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import Navigation from "../../../static-components/Navigation";
+
 export default class Wizard extends Component {
   constructor(props) {
     super(props);
@@ -10,6 +12,9 @@ export default class Wizard extends Component {
     };
 
     this.handleNameAndAddress = this.handleNameAndAddress.bind(this);
+    this.handleRootState = this.handleRootState.bind(this);
+    this.nextStep = this.nextStep.bind(this);
+    this.previousStep = this.previousStep.bind(this);
   }
 
   handleRootState(event) {
@@ -37,6 +42,22 @@ export default class Wizard extends Component {
     }));
   }
 
+  nextStep() {
+    this.setState(prevState => {
+      return {
+        currentStep: prevState.currentStep + 1
+      };
+    });
+  }
+
+  previousStep() {
+    if (this.state.currentStep > 1) {
+      this.setState({
+        currentStep: this.state.currentStep - 1
+      });
+    }
+  }
+
   labelSubmit(finalLabel) {
     this.props.handleSubmit(finalLabel);
   }
@@ -50,6 +71,7 @@ export default class Wizard extends Component {
           ],
           wizardContext: this.state.wizardContext
         })}
+        <Navigation previousStep={this.previousStep} nextStep={this.nextStep} />
       </div>
     );
   }
