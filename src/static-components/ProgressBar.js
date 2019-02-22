@@ -3,10 +3,12 @@ import { Progress } from "semantic-ui-react";
 
 export class ProgressBar extends Component {
   render() {
+    const { progress } = this.props.currentStep;
+
     return (
       <div>
         <Progress
-          success
+          color={progress > 4 ? "green" : "yellow"}
           value={this.props.currentStep}
           total="5"
           progress="ratio"
