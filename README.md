@@ -37,6 +37,8 @@ const WizardAction = {
 
 • The formula for shipping cost is used, but does not implement the class value, connecting to the enumeration (above).
 
+I intend to continue updating this app after submission, and implemet the above instructions.
+
 ## Build instructions
 
 ```
