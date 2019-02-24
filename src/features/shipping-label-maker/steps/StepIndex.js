@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import GetSenderAddress from "./GetSenderAddress";
 import GetReceiverAddress from "./GetReceiverAddress";
 import GetWeight from "./GetWeight";
@@ -15,5 +17,10 @@ const steps = [
   />,
   <Confirm wizardContext={"wizardContext"} onAction={"labelSubmit"} />
 ];
+
+steps.propTypes = {
+  wizardContext: PropTypes.object.isRequired,
+  onAction: PropTypes.func.isRequired
+};
 
 export default steps;

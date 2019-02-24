@@ -33,10 +33,7 @@ export default class Confirm extends Component {
     const shippingOption = wizardContext.shippingOption;
 
     const shippingRate = 0.4,
-      shippingCost =
-        weight *
-        shippingRate *
-        (shippingOption === shippingOption.ground ? 1 : 1.5);
+      shippingCost = weight * shippingRate * (shippingOption === "1" ? 1 : 1.5);
 
     const shippingTotal = shippingCost.toFixed(2);
     this.setState({ shippingTotal });
