@@ -4,11 +4,11 @@ import { Container } from "semantic-ui-react";
 import Wizard from "./core/components/wizard/Wizard";
 import LabelSchema from "./static-components/LabelSchema";
 import Header from "./static-components/Header";
-import ShippingLabelMaker from "./features/shipping-label-maker/ShippingLabelMaker";
+import ShippingLabel from "./features/shipping-label-maker/ShippingLabel";
 
 import steps from "./features/shipping-label-maker/steps/StepIndex";
 
-class App extends Component {
+class ShippingLabelMaker extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <Container style={{ paddingBottom: "100px" }}>
         {this.state.finishedLabel ? (
-          <ShippingLabelMaker finalLabel={this.state.finalLabel} />
+          <ShippingLabel finalLabel={this.state.finalLabel} />
         ) : (
           <Wizard
             wizardContext={LabelSchema}
@@ -43,4 +43,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default ShippingLabelMaker;

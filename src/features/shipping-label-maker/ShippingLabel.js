@@ -3,7 +3,7 @@ import { Container, Segment, Button } from "semantic-ui-react";
 import ContainerStyles from "../../app-styles/ContainerStyles";
 import ButtonContainerStyles from "../../app-styles/ButtonContainerStyles";
 
-export default class ShippingLabelMaker extends Component {
+export default class ShippingLabel extends Component {
   constructor(props) {
     super(props);
     this.state = props.finalLabel;
