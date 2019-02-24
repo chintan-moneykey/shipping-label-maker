@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Segment, Button } from "semantic-ui-react";
 import ContainerStyles from "../../app-styles/ContainerStyles";
+import ButtonContainerStyles from "../../app-styles/ButtonContainerStyles";
 
 export default class ShippingLabelMaker extends Component {
   constructor(props) {
@@ -12,13 +13,13 @@ export default class ShippingLabelMaker extends Component {
     const finalLabel = this.state.wizardContext;
 
     return (
-      <ContainerStyles>
-        <Container>
-          <Container
-            style={{
-              margin: "10vh"
-            }}
-          >
+      <Container
+        style={{
+          margin: "10vh"
+        }}
+      >
+        <ContainerStyles>
+          <Container>
             <Segment.Group>
               <Segment>From:</Segment>
               <Segment.Group>
@@ -51,11 +52,13 @@ export default class ShippingLabelMaker extends Component {
               </Segment>
             </Segment.Group>
           </Container>
-        </Container>
-        <Button onClick={() => window.print()} style={{ marginTop: "20px" }}>
-          Print Label
-        </Button>
-      </ContainerStyles>
+        </ContainerStyles>
+        <ButtonContainerStyles>
+          <Button onClick={() => window.print()} style={{ marginTop: "40px" }}>
+            Print Label
+          </Button>
+        </ButtonContainerStyles>
+      </Container>
     );
   }
 }

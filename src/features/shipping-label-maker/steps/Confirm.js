@@ -49,57 +49,59 @@ export default class Confirm extends Component {
   render() {
     const { wizardContext } = this.state;
     return (
-      <ContainerStyles>
-        <Container>
-          <Segment.Group>
-            <Segment>From:</Segment>
+      <Container>
+        <ContainerStyles>
+          <Container>
             <Segment.Group>
-              <Segment>{wizardContext.from.name}</Segment>
-              <Segment>{wizardContext.from.street}</Segment>
-              <Segment.Group horizontal>
-                <Segment>{wizardContext.from.city}</Segment>
-                <Segment>{wizardContext.from.state}</Segment>
-                <Segment>{wizardContext.from.zip}</Segment>
+              <Segment>From:</Segment>
+              <Segment.Group>
+                <Segment>{wizardContext.from.name}</Segment>
+                <Segment>{wizardContext.from.street}</Segment>
+                <Segment.Group horizontal>
+                  <Segment>{wizardContext.from.city}</Segment>
+                  <Segment>{wizardContext.from.state}</Segment>
+                  <Segment>{wizardContext.from.zip}</Segment>
+                </Segment.Group>
               </Segment.Group>
             </Segment.Group>
-          </Segment.Group>
-          <Segment.Group>
-            <Segment>To:</Segment>
             <Segment.Group>
-              <Segment>{wizardContext.to.name}</Segment>
-              <Segment>{wizardContext.to.street}</Segment>
-              <Segment.Group horizontal>
-                <Segment>{wizardContext.to.city}</Segment>
-                <Segment>{wizardContext.to.state}</Segment>
-                <Segment>{wizardContext.to.zip}</Segment>
+              <Segment>To:</Segment>
+              <Segment.Group>
+                <Segment>{wizardContext.to.name}</Segment>
+                <Segment>{wizardContext.to.street}</Segment>
+                <Segment.Group horizontal>
+                  <Segment>{wizardContext.to.city}</Segment>
+                  <Segment>{wizardContext.to.state}</Segment>
+                  <Segment>{wizardContext.to.zip}</Segment>
+                </Segment.Group>
               </Segment.Group>
             </Segment.Group>
-          </Segment.Group>
-          <Segment.Group>
-            <Segment>Weight:</Segment>
             <Segment.Group>
-              <Segment>{wizardContext.weight} lbs</Segment>
+              <Segment>Weight:</Segment>
+              <Segment.Group>
+                <Segment>{wizardContext.weight} lbs</Segment>
+              </Segment.Group>
             </Segment.Group>
-          </Segment.Group>
-          <Segment.Group>
-            <Segment>Shipping Method:</Segment>
             <Segment.Group>
-              <Segment>{this.state.shippingOption}</Segment>
+              <Segment>Shipping Method:</Segment>
+              <Segment.Group>
+                <Segment>{this.state.shippingOption}</Segment>
+              </Segment.Group>
             </Segment.Group>
-          </Segment.Group>
-          <Segment.Group style={{ fontWeight: "bold" }}>
-            <Segment>Shipping Total:</Segment>
-            <Segment.Group>
-              <Segment>${this.state.shippingTotal}</Segment>
+            <Segment.Group style={{ fontWeight: "bold" }}>
+              <Segment>Shipping Total:</Segment>
+              <Segment.Group>
+                <Segment>${this.state.shippingTotal}</Segment>
+              </Segment.Group>
             </Segment.Group>
-          </Segment.Group>
-          <ButtonContainerStyles>
-            <Button primary onClick={this.confirm}>
-              Submit Info
-            </Button>
-          </ButtonContainerStyles>
-        </Container>
-      </ContainerStyles>
+          </Container>
+        </ContainerStyles>
+        <ButtonContainerStyles>
+          <Button primary onClick={this.confirm} style={{ marginTop: "20px" }}>
+            Submit Info
+          </Button>
+        </ButtonContainerStyles>
+      </Container>
     );
   }
 }
