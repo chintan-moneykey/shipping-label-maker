@@ -97,7 +97,7 @@ export default class Confirm extends Component {
           </Container>
         </ContainerStyles>
         <ButtonContainerStyles>
-          <Button primary onClick={this.confirm} style={{ marginTop: "20px" }}>
+          <Button primary onClick={this.confirm}>
             Submit Info
           </Button>
         </ButtonContainerStyles>

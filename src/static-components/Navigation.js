@@ -3,11 +3,7 @@ import { Container, Button, Icon } from "semantic-ui-react";
 import ButtonContainerStyles from "../app-styles/ButtonContainerStyles";
 
 const Navigation = props => (
-  <Container
-    style={{
-      marginTop: "20px"
-    }}
-  >
+  <Container>
     <ButtonContainerStyles>
       {props.currentStep < 2 ? null : (
         <Button icon labelPosition="left" onClick={props.previousStep}>

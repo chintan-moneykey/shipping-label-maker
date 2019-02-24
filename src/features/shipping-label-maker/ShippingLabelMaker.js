@@ -54,9 +54,7 @@ export default class ShippingLabelMaker extends Component {
           </Container>
         </ContainerStyles>
         <ButtonContainerStyles>
-          <Button onClick={() => window.print()} style={{ marginTop: "40px" }}>
-            Print Label
-          </Button>
+          <Button onClick={() => window.print()}>Print Label</Button>
         </ButtonContainerStyles>
       </Container>
     );
