@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Header, Divider, Form } from "semantic-ui-react";
 
-export class StepTwoRecipientDetails extends Component {
+export class GetReceiverAddress extends Component {
   render() {
     const { onAction } = this.props;
     const recipientDetails = this.props.wizardContext.to;
@@ -82,9 +82,9 @@ export class StepTwoRecipientDetails extends Component {
   }
 }
 
-StepTwoRecipientDetails.defaultProps = {
+GetReceiverAddress.defaultProps = {
   wizardContext: {},
   onAction: () => {}
 };
 
-export default StepTwoRecipientDetails;
+export default GetReceiverAddress;

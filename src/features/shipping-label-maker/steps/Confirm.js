@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Segment, Button } from "semantic-ui-react";
 
-export default class StepFiveConfirmation extends Component {
+export default class Confirm extends Component {
   constructor(props) {
     super(props);
     this.state = {

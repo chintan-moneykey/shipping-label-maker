@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Header, Divider, Form } from "semantic-ui-react";
 
-export class StepFourShipping extends Component {
+export class GetShippingOption extends Component {
   render() {
     const { onAction } = this.props;
 
@@ -45,4 +45,4 @@ export class StepFourShipping extends Component {
   }
 }
 
-export default StepFourShipping;
+export default GetShippingOption;

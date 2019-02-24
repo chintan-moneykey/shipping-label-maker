@@ -1,28 +1,19 @@
 import React from "react";
-import StepOneSenderDetails from "./StepOneSenderDetails";
-import StepTwoRecipientDetails from "./StepTwoRecipientDetails";
-import StepThreeWeight from "./StepThreeWeight";
-import StepFourShipping from "./StepFourShipping";
-import StepFiveConfirmation from "./StepFiveConfirmation";
+import GetSenderAddress from "./GetSenderAddress";
+import GetReceiverAddress from "./GetReceiverAddress";
+import GetWeight from "./GetWeight";
+import GetShippingOption from "./GetShippingOption";
+import Confirm from "./Confirm";
 
 const steps = [
-  <StepOneSenderDetails
-    wizardContext={"from"}
-    onAction={"handleNameAndAddress"}
-  />,
-  <StepTwoRecipientDetails
-    wizardContext={"to"}
-    onAction={"handleNameAndAddress"}
-  />,
-  <StepThreeWeight wizardContext={"weight"} onAction={"handleRootState"} />,
-  <StepFourShipping
+  <GetSenderAddress wizardContext={"from"} onAction={"handleNameAndAddress"} />,
+  <GetReceiverAddress wizardContext={"to"} onAction={"handleNameAndAddress"} />,
+  <GetWeight wizardContext={"weight"} onAction={"handleRootState"} />,
+  <GetShippingOption
     wizardContext={"shippingOption"}
     onAction={"handleRootState"}
   />,
-  <StepFiveConfirmation
-    wizardContext={"wizardContext"}
-    onAction={"labelSubmit"}
-  />
+  <Confirm wizardContext={"wizardContext"} onAction={"labelSubmit"} />
 ];
 
 export default steps;

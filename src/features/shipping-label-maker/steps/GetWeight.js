@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Header, Divider, Form } from "semantic-ui-react";
 
-export class StepThreeWeight extends Component {
+export class GetWeight extends Component {
   render() {
     const { onAction } = this.props;
     const { weight } = this.props.wizardContext;
@@ -35,4 +35,4 @@ export class StepThreeWeight extends Component {
   }
 }
 
-export default StepThreeWeight;
+export default GetWeight;
