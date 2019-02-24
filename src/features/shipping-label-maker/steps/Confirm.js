@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Container, Segment, Button } from "semantic-ui-react";
+import ContainerStyles from "../../../app-styles/ContainerStyles";
+import ButtonContainerStyles from "../../../app-styles/ButtonContainerStyles";
 
 export default class Confirm extends Component {
   constructor(props) {
@@ -47,61 +49,57 @@ export default class Confirm extends Component {
   render() {
     const { wizardContext } = this.state;
     return (
-      <Container
-        style={{
-          border: "solid",
-          borderWidth: "0.5px",
-          borderColor: "grey",
-          borderRadius: "5px",
-          padding: "15px"
-        }}
-      >
-        <Segment.Group>
-          <Segment>From:</Segment>
+      <ContainerStyles>
+        <Container>
           <Segment.Group>
-            <Segment>{wizardContext.from.name}</Segment>
-            <Segment>{wizardContext.from.street}</Segment>
-            <Segment.Group horizontal>
-              <Segment>{wizardContext.from.city}</Segment>
-              <Segment>{wizardContext.from.state}</Segment>
-              <Segment>{wizardContext.from.zip}</Segment>
+            <Segment>From:</Segment>
+            <Segment.Group>
+              <Segment>{wizardContext.from.name}</Segment>
+              <Segment>{wizardContext.from.street}</Segment>
+              <Segment.Group horizontal>
+                <Segment>{wizardContext.from.city}</Segment>
+                <Segment>{wizardContext.from.state}</Segment>
+                <Segment>{wizardContext.from.zip}</Segment>
+              </Segment.Group>
             </Segment.Group>
           </Segment.Group>
-        </Segment.Group>
-        <Segment.Group>
-          <Segment>To:</Segment>
           <Segment.Group>
-            <Segment>{wizardContext.to.name}</Segment>
-            <Segment>{wizardContext.to.street}</Segment>
-            <Segment.Group horizontal>
-              <Segment>{wizardContext.to.city}</Segment>
-              <Segment>{wizardContext.to.state}</Segment>
-              <Segment>{wizardContext.to.zip}</Segment>
+            <Segment>To:</Segment>
+            <Segment.Group>
+              <Segment>{wizardContext.to.name}</Segment>
+              <Segment>{wizardContext.to.street}</Segment>
+              <Segment.Group horizontal>
+                <Segment>{wizardContext.to.city}</Segment>
+                <Segment>{wizardContext.to.state}</Segment>
+                <Segment>{wizardContext.to.zip}</Segment>
+              </Segment.Group>
             </Segment.Group>
           </Segment.Group>
-        </Segment.Group>
-        <Segment.Group>
-          <Segment>Weight:</Segment>
           <Segment.Group>
-            <Segment>{wizardContext.weight} lbs</Segment>
+            <Segment>Weight:</Segment>
+            <Segment.Group>
+              <Segment>{wizardContext.weight} lbs</Segment>
+            </Segment.Group>
           </Segment.Group>
-        </Segment.Group>
-        <Segment.Group>
-          <Segment>Shipping Method:</Segment>
           <Segment.Group>
-            <Segment>{this.state.shippingOption}</Segment>
+            <Segment>Shipping Method:</Segment>
+            <Segment.Group>
+              <Segment>{this.state.shippingOption}</Segment>
+            </Segment.Group>
           </Segment.Group>
-        </Segment.Group>
-        <Segment.Group style={{ fontWeight: "bold" }}>
-          <Segment>Shipping Total:</Segment>
-          <Segment.Group>
-            <Segment>${this.state.shippingTotal}</Segment>
+          <Segment.Group style={{ fontWeight: "bold" }}>
+            <Segment>Shipping Total:</Segment>
+            <Segment.Group>
+              <Segment>${this.state.shippingTotal}</Segment>
+            </Segment.Group>
           </Segment.Group>
-        </Segment.Group>
-        <Button color="green" onClick={this.confirm}>
-          Submit Info
-        </Button>
-      </Container>
+          <ButtonContainerStyles>
+            <Button primary onClick={this.confirm}>
+              Submit Info
+            </Button>
+          </ButtonContainerStyles>
+        </Container>
+      </ContainerStyles>
     );
   }
 }
