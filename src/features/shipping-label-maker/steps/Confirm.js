@@ -95,7 +95,7 @@ export default class Confirm extends Component {
         </ContainerStyles>
         <ButtonContainerStyles>
           <Button primary onClick={this.confirm}>
-            Submit Info
+            Confirm Info
           </Button>
         </ButtonContainerStyles>
       </Container>
