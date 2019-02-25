@@ -77,9 +77,4 @@ export class GetSenderAddress extends Component {
   }
 }
 
-GetSenderAddress.defaultProps = {
-  wizardContext: {},
-  onAction: () => {}
-};
-
 export default GetSenderAddress;
